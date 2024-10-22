@@ -26,12 +26,20 @@ ul {
   list-style: none;
 }
 
+button {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
 .container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
+.main,
 .header {
   background-color: #fff8f3;
 }
@@ -49,11 +57,7 @@ ul {
   height: 25px;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0;
-  border: none;
-  border-radius: 0;
   background-color: transparent;
-  cursor: pointer;
 }
 
 .menu__btn span {
@@ -85,6 +89,46 @@ ul {
   background-image: url(../images/phone.svg);
 }
 
+.top {
+  padding: 40px 0 150px;
+  overflow: hidden;
+}
+
+.top__inner {
+  position: relative;
+}
+
+.top__content {
+  position: relative;
+  width: 370px;
+  padding: 150px 0 250px;
+  z-index: 2;
+}
+
+.top__title {
+  font-family: "Yeseva One", serif;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.top__text {
+  margin-bottom: 48px;
+}
+
+.top__btn {
+  padding: 18px 54px;
+  font-family: "Comfortaa", sans-serif;
+  background-color: #ffbd59;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.top__picture {
+  position: absolute;
+  top: 0;
+  left: 240px;
+}
+
 .footer {
   padding: 40px 0 35px;
 }
@@ -113,6 +157,19 @@ ul {
 @media (max-width: 1000px) {
   .container {
     padding: 0 20px;
+  }
+  .top__content {
+    width: 333px;
+    padding: 95px 0 70px;
+  }
+  .top__text {
+    margin-bottom: 30px;
+  }
+  .top__picture {
+    left: 300px;
+  }
+  .top__img {
+    width: 655px;
   }
 }
 
@@ -143,6 +200,23 @@ ul {
     width: 14px;
     height: 14px;
     background-size: cover;
+  }
+  .top__content {
+    width: 230px;
+  }
+  .top__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .top__text {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+  .top__btn {
+    padding: 15px 30px;
+  }
+  .top__picture {
+    left: 180px;
   }
 }
 
@@ -194,5 +268,50 @@ ul {
   }
   .footer__menu-list {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .top {
+    padding: 30px 0 50px;
+  }
+  .top__content {
+    width: 180px;
+  }
+  .top__title {
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  .top__text {
+    margin-bottom: 15px;
+    font-size: 8px;
+  }
+  .top__btn {
+    padding: 11px 23px;
+    font-size: 10px;
+  }
+  .top__img {
+    width: 309px;
+    left: 167px;
+  }
+}
+
+@media (max-width: 360px) {
+  .top__picture {
+    left: auto;
+    right: 0;
+  }
+  .top__img {
+    width: 140px;
+  }
+  .top__content {
+    width: 200px;
+    padding: 20px 0 0;
+  }
+  .top__title {
+    font-size: 18px;
+  }
+  .top__text {
+    font-size: 10px;
   }
 }
