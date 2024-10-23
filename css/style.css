@@ -98,6 +98,43 @@ button {
   background-color: #7b6152;
 }
 
+.section__card {
+  max-width: 274px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section__card-img {
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+
+.section__card-price {
+  margin-bottom: 12px;
+  font-family: "Yeseva One", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section__card-title {
+  margin-bottom: 16px;
+  font-family: "Yeseva One", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section__card-text {
+  margin-bottom: 27px;
+  font-size: 12px;
+}
+
+.section__card .button {
+  margin-top: auto;
+}
+
 .main {
   overflow: hidden;
 }
@@ -215,41 +252,46 @@ button {
   font-size: 11px;
 }
 
-.products__item {
-  max-width: 274px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.products__item-img {
-  max-width: 100%;
-  margin-bottom: 8px;
-}
-
-.products__item-price {
-  margin-bottom: 12px;
+.courses__box {
+  position: relative;
+  margin-bottom: 15px;
   font-family: "Yeseva One", serif;
-  font-size: 16px;
-  font-weight: 400;
+  color: #fff;
+  font-size: 11px;
 }
 
-.products__item-title {
-  margin-bottom: 16px;
-  font-family: "Yeseva One", serif;
-  font-size: 16px;
-  font-weight: 400;
+.courses__box-title,
+.courses__box-time,
+.courses__box-price {
+  position: absolute;
+  background-color: #bea495;
 }
 
-.products__item-text {
-  margin-bottom: 27px;
-  font-size: 12px;
+.courses__box-title {
+  top: 45%;
+  left: -2px;
+  padding: 15px 15px 15px 10px;
 }
 
-.products__item .button {
-  margin-top: auto;
+.courses__box-time {
+  top: 60%;
+  left: -2px;
+  padding: 7px 15px 7px 10px;
+}
+
+.courses__box-time span {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 10px;
+}
+
+.courses__box-price {
+  right: -8px;
+  bottom: -3px;
+  padding: 19px 10px 18px 10px;
+}
+
+.courses__button {
+  padding: 13px 16px;
 }
 
 .footer {
@@ -315,6 +357,16 @@ button {
   .about__list {
     padding-left: 20px;
   }
+  .courses__box {
+    font-size: 10px;
+  }
+  .courses__box-title {
+    top: 40%;
+    padding: 12px 15px 12px 10px;
+  }
+  .courses__box-time {
+    padding: 7px 15px 7px 10px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -341,6 +393,9 @@ button {
   .button {
     padding: 15px 30px 13px 30px;
   }
+  .button_fz_sm {
+    font-size: 12px;
+  }
   .section__title {
     margin-bottom: 20px;
     font-size: 15px;
@@ -355,6 +410,24 @@ button {
   .section__content {
     grid-template-columns: repeat(2, minmax(142px, 190px));
     gap: 30px;
+  }
+  .section__card {
+    max-width: 189px;
+  }
+  .section__card-img {
+    margin-bottom: 6px;
+  }
+  .section__card-price {
+    margin-bottom: 7px;
+    font-size: 12px;
+  }
+  .section__card-title {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .section__card-text {
+    margin-bottom: 18px;
+    font-size: 8px;
   }
   .phone::before {
     top: -2px;
@@ -393,22 +466,19 @@ button {
   .about__item-text {
     font-size: 6px;
   }
-  .products__item {
-    max-width: 189px;
+  .courses__box {
+    font-size: 8px;
   }
-  .products__item-img {
-    margin-bottom: 6px;
+  .courses__box-title {
+    padding: 8px 11px 8px 6px;
   }
-  .products__item-price {
-    margin-bottom: 7px;
-    font-size: 12px;
+  .courses__box-time {
+    padding: 7px 15px 7px 10px;
   }
-  .products__item-title {
-    margin-bottom: 10px;
-    font-size: 12px;
+  .courses__box-price {
+    padding: 15px 10px 14px 10px;
   }
-  .products__item-text {
-    margin-bottom: 18px;
+  .courses__button {
     font-size: 8px;
   }
 }
@@ -416,6 +486,9 @@ button {
 @media (max-width: 640px) {
   .container {
     padding: 0 10px;
+  }
+  .section {
+    margin-bottom: 50px;
   }
   .section__inner {
     grid-template-columns: auto;
@@ -457,6 +530,32 @@ button {
 }
 
 @media (max-width: 500px) {
+  .section__card-text_lg {
+    font-size: 10px;
+  }
+  .courses__content {
+    grid-template-columns: auto;
+  }
+  .courses__card {
+    max-width: 255px;
+  }
+  .courses__box {
+    font-size: 10px;
+  }
+  .courses__box-title {
+    top: 45%;
+    padding: 15px 15px 15px 10px;
+  }
+  .courses__box-time {
+    padding: 7px 15px 7px 10px;
+  }
+  .courses__box-price {
+    padding: 19px 10px 18px 10px;
+  }
+  .courses__card-text {
+    max-width: 220px;
+    font-size: 10px;
+  }
   .footer {
     padding: 50px 0;
     font-size: 14px;
@@ -477,9 +576,6 @@ button {
   .button {
     padding: 12px 23px 10px 23px;
     font-size: 10px;
-  }
-  .section {
-    margin-bottom: 50px;
   }
   .section__title_top {
     margin-bottom: 15px;
@@ -533,6 +629,9 @@ button {
   body {
     font-size: 8px;
   }
+  .button_fz_sm {
+    font-size: 8px;
+  }
   .section__title {
     margin-bottom: 10px;
   }
@@ -545,6 +644,24 @@ button {
   }
   .section__content {
     gap: 40px 15px;
+  }
+  .section__descr {
+    max-width: 205px;
+  }
+  .section__card-img {
+    margin-bottom: 5px;
+  }
+  .section__card-price {
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+  .section__card-title {
+    margin-bottom: 7px;
+    font-size: 10px;
+  }
+  .section__card-text {
+    margin-bottom: 16px;
+    font-size: 6px;
   }
   .top__picture {
     left: auto;
@@ -577,19 +694,10 @@ button {
   .products__descr {
     max-width: 235px;
   }
-  .products__item-img {
-    margin-bottom: 5px;
+  .courses__box {
+    margin-bottom: 25px;
   }
-  .products__item-price {
-    margin-bottom: 5px;
+  .section__card-text_lg {
     font-size: 10px;
-  }
-  .products__item-title {
-    margin-bottom: 7px;
-    font-size: 10px;
-  }
-  .products__item-text {
-    margin-bottom: 16px;
-    font-size: 6px;
   }
 }
