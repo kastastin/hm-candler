@@ -1,14 +1,11 @@
-html {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
 body {
+  background-color: #fff8f3;
   font-family: "Comfortaa", sans-serif;
   color: #000;
   font-size: 14px;
@@ -33,19 +30,76 @@ button {
   cursor: pointer;
 }
 
+.button {
+  padding: 21px 45px 19px 45px;
+  background-color: #ffbd59;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .container {
-  max-width: 1180px;
+  box-sizing: content-box;
+  max-width: 1162px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-.section-title {
-  font-family: "Yeseva One", serif;
+.section {
+  margin-bottom: 150px;
 }
 
-.main,
-.header {
-  background-color: #fff8f3;
+.section__title {
+  margin-bottom: 15px;
+  font-family: "Yeseva One", serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.section__title_top {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.section__inner {
+  display: grid;
+  grid-template-columns: minmax(300px, 372px) minmax(auto, 770px);
+  gap: 0 20px;
+}
+
+.section__content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 375px));
+  gap: 50px 20px;
+}
+
+.section_decor {
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.section_decor::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  width: 22px;
+  height: 30px;
+  background-image: url(../images/section-decor.png);
+}
+
+.section_decor::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 13px;
+  width: 1000%;
+  height: 1px;
+  background-color: #7b6152;
+}
+
+.main {
+  overflow: hidden;
 }
 
 .header__inner {
@@ -94,8 +148,7 @@ button {
 }
 
 .top {
-  padding: 40px 0 150px;
-  overflow: hidden;
+  padding-top: 40px;
 }
 
 .top__inner {
@@ -104,27 +157,13 @@ button {
 
 .top__content {
   position: relative;
-  width: 370px;
+  width: 372px;
   padding: 150px 0 250px;
   z-index: 2;
 }
 
-.top__title {
-  font-family: "Yeseva One", serif;
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
 .top__text {
   margin-bottom: 48px;
-}
-
-.top__btn {
-  padding: 18px 54px;
-  font-family: "Comfortaa", sans-serif;
-  background-color: #ffbd59;
-  font-size: 14px;
-  font-weight: 600;
 }
 
 .top__picture {
@@ -134,7 +173,6 @@ button {
 }
 
 .about {
-  overflow: hidden;
   padding: 50px 0;
   background-color: #a5978e;
   color: #fafafa;
@@ -146,12 +184,7 @@ button {
 }
 
 .about__content {
-  min-width: 370px;
-}
-
-.about__title {
-  margin-bottom: 15px;
-  font-size: 40px;
+  min-width: 372px;
 }
 
 .about__text {
@@ -159,7 +192,6 @@ button {
 }
 
 .about__list {
-  position: relative;
   flex-basis: 930px;
   display: flex;
   align-items: center;
@@ -168,23 +200,11 @@ button {
 }
 
 .about__list::before {
-  content: "";
-  position: absolute;
   left: 0;
-  bottom: 0;
-  width: 22px;
-  height: 30px;
-  background-image: url(../images/about-decor.png);
 }
 
 .about__list::after {
-  content: "";
-  position: absolute;
   left: 22px;
-  bottom: 13px;
-  width: 1000%;
-  height: 1px;
-  background-color: #7b6152;
 }
 
 .about__item-img {
@@ -195,8 +215,46 @@ button {
   font-size: 11px;
 }
 
+.products__item {
+  max-width: 274px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.products__item-img {
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+
+.products__item-price {
+  margin-bottom: 12px;
+  font-family: "Yeseva One", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.products__item-title {
+  margin-bottom: 16px;
+  font-family: "Yeseva One", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.products__item-text {
+  margin-bottom: 27px;
+  font-size: 12px;
+}
+
+.products__item .button {
+  margin-top: auto;
+}
+
 .footer {
   padding: 40px 0 35px;
+  background-color: #fff;
 }
 
 .footer__inner {
@@ -224,6 +282,20 @@ button {
   .container {
     padding: 0 20px;
   }
+  .section__inner {
+    grid-template-columns: minmax(200px, 300px) minmax(auto, 636px);
+    gap: 0 24px;
+  }
+  .section__content {
+    grid-template-columns: repeat(2, minmax(190px, 300px));
+    gap: 65px 35px;
+  }
+  .section__text {
+    font-size: 10px;
+  }
+  .section_decor {
+    padding-bottom: 60px;
+  }
   .top__content {
     width: 333px;
     padding: 95px 0 70px;
@@ -238,7 +310,7 @@ button {
     width: 655px;
   }
   .about__content {
-    min-width: 300px;
+    min-width: 320px;
   }
   .about__list {
     padding-left: 20px;
@@ -266,8 +338,23 @@ button {
   .container {
     max-width: 640px;
   }
-  .section-title {
+  .button {
+    padding: 15px 30px 13px 30px;
+  }
+  .section__title {
+    margin-bottom: 20px;
     font-size: 15px;
+  }
+  .section__title_top {
+    font-size: 20px;
+  }
+  .section__inner {
+    grid-template-columns: minmax(180px, 200px) minmax(auto, 405px);
+    gap: 0 35px;
+  }
+  .section__content {
+    grid-template-columns: repeat(2, minmax(142px, 190px));
+    gap: 30px;
   }
   .phone::before {
     top: -2px;
@@ -279,24 +366,14 @@ button {
   .top__content {
     width: 230px;
   }
-  .top__title {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
   .top__text {
     margin-bottom: 20px;
-  }
-  .top__btn {
-    padding: 15px 30px;
   }
   .top__picture {
     left: 180px;
   }
   .about__content {
     min-width: 200px;
-  }
-  .about__title {
-    margin-bottom: 20px;
   }
   .about__list {
     gap: 0 10px;
@@ -316,11 +393,38 @@ button {
   .about__item-text {
     font-size: 6px;
   }
+  .products__item {
+    max-width: 189px;
+  }
+  .products__item-img {
+    margin-bottom: 6px;
+  }
+  .products__item-price {
+    margin-bottom: 7px;
+    font-size: 12px;
+  }
+  .products__item-title {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .products__item-text {
+    margin-bottom: 18px;
+    font-size: 8px;
+  }
 }
 
 @media (max-width: 640px) {
   .container {
     padding: 0 10px;
+  }
+  .section__inner {
+    grid-template-columns: auto;
+    justify-items: center;
+    row-gap: 30px;
+  }
+  .section__descr {
+    max-width: 300px;
+    text-align: center;
   }
   .header {
     position: relative;
@@ -370,23 +474,32 @@ button {
 }
 
 @media (max-width: 480px) {
+  .button {
+    padding: 12px 23px 10px 23px;
+    font-size: 10px;
+  }
+  .section {
+    margin-bottom: 50px;
+  }
+  .section__title_top {
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  .section_decor::before {
+    left: 0;
+  }
+  .section_decor::after {
+    left: 22px;
+  }
   .top {
-    padding: 30px 0 50px;
+    padding-top: 30px;
   }
   .top__content {
     width: 180px;
   }
-  .top__title {
-    margin-bottom: 15px;
-    font-size: 15px;
-  }
   .top__text {
     margin-bottom: 15px;
     font-size: 8px;
-  }
-  .top__btn {
-    padding: 11px 23px;
-    font-size: 10px;
   }
   .top__img {
     width: 309px;
@@ -420,8 +533,18 @@ button {
   body {
     font-size: 8px;
   }
-  .section-title {
+  .section__title {
     margin-bottom: 10px;
+  }
+  .section__title_top {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  .section__inner {
+    row-gap: 25px;
+  }
+  .section__content {
+    gap: 40px 15px;
   }
   .top__picture {
     left: auto;
@@ -433,9 +556,6 @@ button {
   .top__content {
     width: 200px;
     padding: 20px 0 0;
-  }
-  .top__title {
-    font-size: 18px;
   }
   .top__text {
     font-size: 10px;
@@ -453,5 +573,23 @@ button {
   }
   .about__item-img_2 {
     display: none;
+  }
+  .products__descr {
+    max-width: 235px;
+  }
+  .products__item-img {
+    margin-bottom: 5px;
+  }
+  .products__item-price {
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+  .products__item-title {
+    margin-bottom: 7px;
+    font-size: 10px;
+  }
+  .products__item-text {
+    margin-bottom: 16px;
+    font-size: 6px;
   }
 }
