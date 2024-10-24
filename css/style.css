@@ -332,6 +332,41 @@ button {
   padding: 13px 16px;
 }
 
+.team {
+  padding: 50px 0 80px;
+  background-color: #a5978e;
+  color: #fafafa;
+}
+
+.team__content {
+  gap: 75px;
+}
+
+.team__item {
+  position: relative;
+}
+
+.team__item-box {
+  position: absolute;
+  right: 33px;
+  bottom: 13px;
+  width: 165px;
+  padding: 15px 10px 16px;
+  background-color: #7b6152;
+  text-align: center;
+  z-index: 4;
+}
+
+.team__item-name {
+  margin-bottom: 4px;
+  font-family: "Yeseva One", serif;
+  font-size: 12px;
+}
+
+.team__item-text {
+  font-size: 10px;
+}
+
 .footer {
   padding: 40px 0 35px;
   background-color: #fff;
@@ -415,6 +450,12 @@ button {
   }
   .courses__box-time {
     padding: 7px 15px 7px 10px;
+  }
+  .team {
+    padding: 50px 0;
+  }
+  .team__content {
+    gap: 30px 20px;
   }
 }
 
@@ -547,6 +588,24 @@ button {
   .courses__button {
     font-size: 8px;
   }
+  .team__content {
+    gap: 30px 15px;
+  }
+  .team__item-img {
+    width: 140px;
+  }
+  .team__item-box {
+    right: -24px;
+    bottom: 8px;
+    width: 109px;
+    padding: 9px 6px 10px;
+  }
+  .team__item-name {
+    font-size: 8px;
+  }
+  .team__item-text {
+    font-size: 7px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -592,6 +651,10 @@ button {
     top: calc(100%);
     opacity: 1;
     transform: translateY(0%);
+  }
+  .team__item-box {
+    right: auto;
+    left: 80px;
   }
 }
 
@@ -692,6 +755,35 @@ button {
   .steps__list {
     gap: 25px 40px;
   }
+  .team__content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 430px) {
+  .team__inner {
+    justify-items: start;
+  }
+  .team__descr {
+    justify-self: center;
+  }
+  .team__content {
+    grid-template-columns: auto;
+  }
+  .team__item-img {
+    width: 204px;
+  }
+  .team__item-box {
+    left: 148px;
+    bottom: 15px;
+    width: 150px;
+  }
+  .team__item-name {
+    font-size: 12px;
+  }
+  .team__item-text {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -742,6 +834,9 @@ button {
     margin-bottom: 16px;
     font-size: 6px;
   }
+  .section__card-text_lg {
+    font-size: 10px;
+  }
   .top__picture {
     left: auto;
     right: 0;
@@ -776,7 +871,7 @@ button {
   .courses__box {
     margin-bottom: 25px;
   }
-  .section__card-text_lg {
-    font-size: 10px;
+  .team__content {
+    gap: 20px 0;
   }
 }
