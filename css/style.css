@@ -252,6 +252,44 @@ button {
   font-size: 11px;
 }
 
+.steps__list {
+  grid-template-columns: repeat(2, auto);
+  gap: 70px 20px;
+  counter-reset: number;
+}
+
+.steps__item {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+}
+
+.steps__item::before {
+  counter-increment: number;
+  content: "0" counter(number);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "Yeseva One", serif;
+  color: #bea495;
+  font-size: 30px;
+}
+
+.steps__item:nth-child(n + 10)::before {
+  content: counter(number);
+}
+
+.steps__item_even::before {
+  left: auto;
+  right: 0;
+}
+
+.steps__item-text {
+  flex-basis: 174px;
+  padding-bottom: 40px;
+}
+
 .courses__box {
   position: relative;
   margin-bottom: 15px;
@@ -357,6 +395,17 @@ button {
   .about__list {
     padding-left: 20px;
   }
+  .steps__list {
+    grid-template-columns: repeat(2, 300px);
+    gap: 35px;
+  }
+  .steps__item {
+    gap: 0 30px;
+  }
+  .steps__item-img {
+    max-width: 130px;
+    object-fit: cover;
+  }
   .courses__box {
     font-size: 10px;
   }
@@ -370,6 +419,23 @@ button {
 }
 
 @media (max-width: 900px) {
+  .steps__list {
+    grid-template-columns: repeat(2, 205px);
+    justify-content: center;
+    gap: 25px 35px;
+  }
+  .steps__item {
+    gap: 0 20px;
+  }
+  .steps__item::before {
+    font-size: 20px;
+  }
+  .steps__item-img {
+    max-width: 85px;
+  }
+  .steps__item-text {
+    font-size: 8px;
+  }
   .footer__inner {
     flex-wrap: wrap;
   }
@@ -622,6 +688,19 @@ button {
   }
   .about__item-text {
     display: none;
+  }
+  .steps__list {
+    gap: 25px 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  .steps__list {
+    grid-template-columns: repeat(2, 155px);
+    gap: 20px 25px;
+  }
+  .steps__item-img {
+    max-width: 66px;
   }
 }
 
