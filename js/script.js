@@ -10,14 +10,28 @@ const swiperFeedback = new Swiper(".feedback__slider", {
   spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 });
 
 const swiperCertificates = new Swiper(".certificates__slider", {
   loop: true,
-  spaceBetween: 20,
-  slidesPerView: 3,
+  slidesPerView: 1,
+  spaceBetween: 10,
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    430: {
+      slidesPerView: 2,
+    },
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
   },
 });
