@@ -78,6 +78,11 @@ button {
   padding-bottom: 80px;
 }
 
+.feedback .section_decor,
+.certificates .section_decor {
+  padding-bottom: 120px;
+}
+
 .section_decor::before {
   content: "";
   position: absolute;
@@ -367,6 +372,85 @@ button {
   font-size: 10px;
 }
 
+.feedback__inner {
+  grid-template-columns: minmax(300px, 372px) minmax(662px, 770px);
+}
+
+.feedback__slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.feedback__item {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  gap: 0 14px;
+}
+
+.feedback__item-video {
+  position: relative;
+}
+
+.feedback__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+.feedback__item-content {
+  padding-bottom: 70px;
+}
+
+.feedback__item-social {
+  margin-bottom: 12px;
+}
+
+.feedback__item-name {
+  margin-bottom: 15px;
+  font-family: "Yeseva One", serif;
+  font-size: 16px;
+}
+
+.feedback__item-text {
+  margin-bottom: 5px;
+}
+
+.feedback__button {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  padding: 20px 35px;
+}
+
+.feedback .swiper-pagination,
+.certificates .swiper-pagination {
+  bottom: 66px;
+}
+
+.swiper-pagination-bullet {
+  width: 53px;
+  height: 4px;
+  border-radius: 0;
+  background-color: #bea495;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7b6152;
+}
+
+.certificates__slider {
+  width: 152%;
+  overflow: hidden;
+}
+
+.certificates__slider .swiper-pagination {
+  text-align: left;
+}
+
 .footer {
   padding: 40px 0 35px;
   background-color: #fff;
@@ -457,6 +541,29 @@ button {
   .team__content {
     gap: 30px 20px;
   }
+  .feedback__inner {
+    grid-template-columns: minmax(235px, 300px) minmax(405px, 636px);
+    align-items: start;
+    gap: 0 16px;
+  }
+  .feedback__item {
+    grid-template-columns: minmax(180px, 380px) minmax(210px, 266px);
+    align-items: start;
+  }
+  .feedback__item-img {
+    max-width: 100%;
+  }
+  .feedback .section_decor,
+  .certificates .section_decor {
+    padding-bottom: 105px;
+  }
+  .feedback .swiper-pagination,
+  .certificates .swiper-pagination {
+    bottom: 75px;
+  }
+  .certificates__slider .swiper-pagination {
+    text-align: center;
+  }
 }
 
 @media (max-width: 900px) {
@@ -476,6 +583,12 @@ button {
   }
   .steps__item-text {
     font-size: 8px;
+  }
+  .feedback__item-name {
+    font-size: 12px;
+  }
+  .feedback__item-text {
+    font-size: 10px;
   }
   .footer__inner {
     flex-wrap: wrap;
@@ -606,6 +719,10 @@ button {
   .team__item-text {
     font-size: 7px;
   }
+  .feedback__button {
+    padding: 15px 20px;
+    font-size: 8px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -619,6 +736,21 @@ button {
     grid-template-columns: auto;
     justify-items: center;
     row-gap: 30px;
+  }
+  .feedback .section__inner,
+  .certificates .section__inner {
+    justify-items: normal;
+  }
+  .feedback__inner,
+  .certificates__inner {
+    grid-template-columns: 100%;
+  }
+  .feedback__descr,
+  .certificates__descr {
+    margin: 0 auto;
+  }
+  .feedback__item {
+    align-items: center;
   }
   .section__descr {
     max-width: 300px;
@@ -710,6 +842,10 @@ button {
     margin-bottom: 15px;
     font-size: 15px;
   }
+  .feedback .section_decor,
+  .certificates .section_decor {
+    padding-bottom: 95px;
+  }
   .section_decor::before {
     left: 0;
   }
@@ -758,6 +894,10 @@ button {
   .team__content {
     gap: 30px;
   }
+  .feedback .swiper-pagination,
+  .certificates .swiper-pagination {
+    bottom: 60px;
+  }
 }
 
 @media (max-width: 430px) {
@@ -784,6 +924,39 @@ button {
   .team__item-text {
     font-size: 10px;
   }
+  .feedback__item {
+    grid-template-columns: 250px;
+    justify-content: center;
+    gap: 12px 0;
+  }
+  .feedback__item-content {
+    text-align: center;
+  }
+  .feedback__item-social img {
+    margin-bottom: 10px;
+  }
+  .feedback__item-name {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .feedback__item-content {
+    padding-bottom: 60px;
+  }
+  .feedback__button {
+    right: 50%;
+    bottom: 0;
+    padding: 15px 20px;
+    font-size: 8px;
+    transform: translateX(50%);
+  }
+
+  .feedback .swiper-pagination,
+  .certificates .swiper-pagination {
+    bottom: 60px;
+  }
+  .swiper-pagination-bullet {
+    width: 28px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -793,6 +966,10 @@ button {
   }
   .steps__item-img {
     max-width: 66px;
+  }
+  .feedback .swiper-pagination,
+  .certificates .swiper-pagination {
+    bottom: 50px;
   }
 }
 
