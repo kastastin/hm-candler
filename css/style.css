@@ -451,6 +451,38 @@ button {
   text-align: left;
 }
 
+.promo {
+  position: relative;
+  height: 330px;
+  background-image: url(../images/promo-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.promo__inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+.promo__text {
+  padding-left: 55px;
+  font-family: "Yeseva One", serif;
+  color: #fff;
+  font-size: 40px;
+}
+
+.promo__button {
+  margin-right: 115px;
+  padding: 19px 45px 15px 45px;
+}
+
 .footer {
   padding: 40px 0 35px;
   background-color: #fff;
@@ -489,6 +521,9 @@ button {
   }
   .certificates__inner {
     grid-template-columns: minmax(300px, 372px) minmax(662px, 770px);
+  }
+  .promo__text {
+    max-width: 610px;
   }
 }
 
@@ -583,6 +618,12 @@ button {
   .certificates__slider .swiper-pagination {
     text-align: center;
   }
+  .promo__text {
+    padding-left: 60px;
+  }
+  .promo__button {
+    margin-right: 65px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -608,6 +649,9 @@ button {
   }
   .feedback__item-text {
     font-size: 10px;
+  }
+  .promo__text {
+    max-width: 420px;
   }
   .footer__inner {
     flex-wrap: wrap;
@@ -751,6 +795,19 @@ button {
   .certificates__img {
     width: 200px;
   }
+  .promo {
+    height: 150px;
+  }
+  .promo__text {
+    max-width: none;
+    padding-left: 35px;
+    font-size: 15px;
+  }
+  .promo__button {
+    margin-right: 35px;
+    padding: 14px 28px 11px 28px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -848,6 +905,9 @@ button {
     max-width: 220px;
     font-size: 10px;
   }
+  .promo__text {
+    max-width: 255px;
+  }
   .footer {
     padding: 50px 0;
     font-size: 14px;
@@ -932,6 +992,17 @@ button {
   .certificates__slider {
     width: 410px;
   }
+  .promo {
+    height: 120px;
+  }
+  .promo__text {
+    padding-left: 43px;
+  }
+  .promo__button {
+    margin-right: 43px;
+    font-size: 8px;
+    padding: 12px 16px 10px 16px;
+  }
 }
 
 @media (max-width: 430px) {
@@ -992,6 +1063,9 @@ button {
   }
   .certificates__slider {
     width: 200px;
+  }
+  .promo__text {
+    max-width: 180px;
   }
 }
 
@@ -1086,5 +1160,12 @@ button {
   }
   .team__content {
     gap: 20px 0;
+  }
+  .promo__text {
+    max-width: 210px;
+    padding-left: 0;
+  }
+  .promo__button {
+    margin-right: 0;
   }
 }
