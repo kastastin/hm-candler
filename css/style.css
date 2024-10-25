@@ -483,6 +483,63 @@ button {
   padding: 19px 45px 15px 45px;
 }
 
+.contacts {
+  margin: 150px 0 50px;
+}
+
+.contacts__inner {
+  display: grid;
+  grid-template-columns: minmax(592px, 664px) minmax(335px, 448px);
+  gap: 0 50px;
+}
+
+.contacts__img {
+  max-width: 100%;
+}
+
+.form {
+  align-self: end;
+  height: max-content;
+  padding: 75px 42px;
+  margin-bottom: 50px;
+  background-color: #fff;
+}
+
+.form__title {
+  margin-bottom: 50px;
+  font-family: "Yeseva One", serif;
+  font-size: 40px;
+}
+
+.form__inputs-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+  margin-bottom: 50px;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 10px 7px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+  outline: none;
+}
+
+.form__input::placeholder {
+  font-family: "Comfortaa", sans-serif;
+  color: #b3b3b3;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.form__button {
+  padding: 18px 34px 16px 34px;
+}
+
 .footer {
   padding: 40px 0 35px;
   background-color: #fff;
@@ -524,6 +581,11 @@ button {
   }
   .promo__text {
     max-width: 610px;
+  }
+  .form,
+  .contacts__img {
+    align-self: center;
+    margin-bottom: 0;
   }
 }
 
@@ -623,6 +685,16 @@ button {
   }
   .promo__button {
     margin-right: 65px;
+  }
+  .contacts__inner {
+    grid-template-columns: minmax(350px, 592px) minmax(187px, 425px);
+    gap: 0 30px;
+  }
+  .form {
+    padding: 75px 21px;
+  }
+  .form__inputs-box {
+    margin-bottom: 40px;
   }
 }
 
@@ -808,6 +880,16 @@ button {
     padding: 14px 28px 11px 28px;
     font-size: 12px;
   }
+  .form {
+    padding: 30px 20px;
+  }
+  .form__title {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .form__inputs-box {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -875,6 +957,13 @@ button {
   }
   .certificates__slider {
     margin: 0 auto;
+  }
+  .contacts__inner {
+    grid-template-columns: 100%;
+    gap: 0;
+  }
+  .contacts__img {
+    display: none;
   }
 }
 
@@ -994,6 +1083,7 @@ button {
   }
   .promo {
     height: 120px;
+    margin-top: 50px;
   }
   .promo__text {
     padding-left: 43px;
@@ -1002,6 +1092,10 @@ button {
     margin-right: 43px;
     font-size: 8px;
     padding: 12px 16px 10px 16px;
+  }
+  .form__button {
+    padding: 16px 13px 14px 13px;
+    font-size: 8px;
   }
 }
 
